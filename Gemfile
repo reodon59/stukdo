@@ -23,6 +23,16 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
+group :development, :test do
+gem 'spring'
+gem 'sqlite3'
+end 
+
+group :production do
+gem 'rails_12factor'
+gem 'pg'
+end 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -47,3 +57,4 @@ gem 'simple_form'
 gem 'devise'
 
 gem "auto_html"
+
