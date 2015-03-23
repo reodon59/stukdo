@@ -20,10 +20,21 @@ test:
   <<: *default
   database: db/test.sqlite3
 
+#production: &default
+#adapter: postgresql
+#database: todoism
+#encoding: utf8
+#min_messages: warning
+#pool: 5
+#username: reodon59
+#password: admin
+#timeout: 5000 
+#host: localhost
+
 production: &default
-adapter: postgresql
-database: todoism
-encoding: utf8
-min_messages: warning
-pool: 5
-timeout: 5000 
+  adapter: postgresql
+  database: todoism
+  encoding: utf8
+  min_messages: warning
+  pool: 5 
+  timeout: 5000
